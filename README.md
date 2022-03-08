@@ -1,7 +1,7 @@
 <h1 align="center"> Consumindo API pública do GitHub</h1> 
 <h2> Descrição </h2>
 Este projeto visa a criação de um site, com a função de solicitar e manipular dados de repositórios de organizações do GitHub, através de sua API pública.
-<h2> target="_blank" <a href = "https://jmatheuzz.github.io/consumindo-api-github/">Acessar site pelo GitHub pages</a></h2>
+<h2> <a target="_blank" href = "https://jmatheuzz.github.io/consumindo-api-github/">Acessar site pelo GitHub pages</a></h2>
 
 <h2>Tecnologias utilizadas</h2>
 
