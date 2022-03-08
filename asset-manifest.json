@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/consumindo-api-github/static/css/main.39d9e16b.css",
+    "main.js": "/consumindo-api-github/static/js/main.5c2d5ca5.js",
+    "static/media/loading.svg": "/consumindo-api-github/static/media/loading.81e84c14a2d2c5896ecec4859bee595b.svg",
+    "index.html": "/consumindo-api-github/index.html",
+    "main.39d9e16b.css.map": "/consumindo-api-github/static/css/main.39d9e16b.css.map",
+    "main.5c2d5ca5.js.map": "/consumindo-api-github/static/js/main.5c2d5ca5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39d9e16b.css",
+    "static/js/main.5c2d5ca5.js"
+  ]
+}
