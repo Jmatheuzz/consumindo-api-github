@@ -3,31 +3,27 @@ import styled from 'styled-components';
 
 export const Div = styled.div `
     width: 100%;
-    min-height: 70px;
-    margin: 0px 0px;
-    margin-bottom: 50px;
+    height: 100%;
+    margin: 0px auto;
+    margin-top: 2vh;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #1c232e;
-
-    .input-filter {
-        margin-left: 2px;
-        width: 150px;
-    }
-
+    justify-content: center;
+    align-items: flex-start;
 `;
 
 export const Form = styled.form `
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 80%;
-    max-width: 500px;
-    margin-left: 20px;
+    margin: 20 0 ;
+    
+    div {
+        display: flex;
+    }
     button {
-        min-width: 30px;
-        min-height: 30px;
+        max-width: 40px;
+        max-height: 40px;
         background-color: #1c232e;
         color: #fff;
         border: none;
@@ -43,9 +39,9 @@ export const Form = styled.form `
     
     input {
         color: #35352b;
-        width: 250px;
+        width: 35vw;
         height: 40px;
-        border: none;
+        border: 1px solid #35352b;
         padding: 5px 10px;
         border-radius: 50px;
         text-align: center;
@@ -57,36 +53,57 @@ export const Form = styled.form `
         }
 
     }
+    @media(max-width: 800px) {
+        input {
+            width: 40vw;
+            height: 7vw;
+        }
 
-    .filter-button-on {
-        color: #7d1a0c;
+        button {
+            width: 7vw;
+            height: 7vw;
+        }
+
+        & {
+            width: 100%;
+        }
+
+        .input-filter {
+            max-width: 95px;
+        }
+
+    }
+    .input-filter {
+        margin-left: 2px;
+        width: 150px;
+    }
+
+    .filter-button-on{
+        filter: brightness(30%);
     }
 
 `;
 
 export const Data= styled.div `
-
+    overflow-y: scroll;
     max-width: 800px;
-    margin: 0px auto;
-    background-color: #1c232e;
-    border-left: 1px solid #1c232e;
-    border-right: 1px solid #1c232e;
+    max-height: 70vh;
+    margin: 20px auto;
     div {
         width: 100%;
         margin-top: 50px;
         padding: 10px;
-        background-color: #fff;
-        color: #000;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-bottom: 1px solid #1c232e;
+        border-bottom: 1px solid #fff;
 
     }
 
     .container-avatar{
         max-width: 200px;
         margin: 0px auto;
+        border: none;
         background-color: transparent;
         
     }
@@ -104,6 +121,7 @@ export const Data= styled.div `
         margin-top: 10px;
         display: block;
         border-radius: 50%;
+        border: 5px solid #1c232e;
     }
     
 `;

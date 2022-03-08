@@ -4,15 +4,18 @@ import React, { useState } from "react";
 import {FiSearch, FiFilter} from 'react-icons/fi';
 import { Div, Form, Data } from "./styled";
 import axios from '../../services/axios';
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import {get} from 'lodash';
+import Loading from "../../components/Loading";
 
 export default function buscaAPI(){
     const [repos, setRepos] = useState([]);
     const [filterOn, setFilterOn] = useState(false);
+    const [loadingOn, setLoadingOn] = useState(false);
 
+    
     function handleSubtmit(e){
+        setLoadingOn(true);
         const orgName = document.querySelector('.org');
         const inputFilter = document.querySelector('.input-filter');
         
@@ -47,12 +50,14 @@ export default function buscaAPI(){
                 }
             }
 
-            
+            setLoadingOn(false);
             }
-
+        
         getData();
+        
     }
 
+    
 
     function handleClick(e){
         e.preventDefault();
@@ -66,13 +71,13 @@ export default function buscaAPI(){
         }
 
     }
-        
     
     return (
         <>
+            
             <Div>
                 <Form onSubmit={handleSubtmit}>
-                    <input className="org" type={'search'} placeholder={'Buscar organização...'}/>
+                    <input className="org" type={'search'} placeholder={'Buscar...'}/>
                     <button type={'submit'}> <FiSearch size={30} /> </button>
                     <button className="filter-button" onClick={handleClick}> <FiFilter size={30}/></button>
                     {filterOn && 
@@ -80,14 +85,9 @@ export default function buscaAPI(){
                         }
                 </Form>
 
-                <Link style={{
-                            color: '#fff',
-                            textDecoration: 'none',
-                            fontSize: 18 + 'px',
-                            fontFamily: 'sans-serif'
-                            }} to = "sobremim">Sobre mim</Link>
             </Div>
-
+            
+            {loadingOn && <Loading/>}
 
             <Data>
                 
